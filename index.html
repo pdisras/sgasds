@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastreo - ANDP ENvs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #fff;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rastreo - ANDP ENvs</h1>
+    </header>
+    <nav>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Nuestros Servicios</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#rastreo">Rastreo-Guía</a>
+        <a href="#paqueteria">Paquetería</a>
+    </nav>
+    <section id="nosotros">
+        <h2>Nosotros</h2>
+        <p>Somos ANDP ENvs, una empresa de mensajería colombiana dedicada a ofrecer soluciones de seguimiento en tiempo real para tus envíos.</p>
+        <p>Con tecnología de punta, garantizamos que puedas rastrear tus paquetes en cualquier momento y desde cualquier lugar.</p>
+        <p>Nuestra misión es brindarte tranquilidad y seguridad, asegurando que tus envíos lleguen a su destino de manera rápida y eficiente.</p>
+        <p>Confía en nosotros para tus necesidades de mensajería, ¡estamos aquí para ayudarte!</p>
+    </section>
+    <section id="servicios">
+        <h2>Nuestros Servicios</h2>
+        <p>Ofrecemos una amplia gama de servicios de mensajería para satisfacer todas tus necesidades de envío.</p>
+        <p>Desde envíos locales hasta internacionales, estamos aquí para hacer que el proceso sea lo más fácil y conveniente posible para ti.</p>
+        <p>Además, todos nuestros paquetes están equipados con GPS para que puedas seguir su ubicación en tiempo real.</p>
+        <p>Confía en nosotros para tus entregas, ¡te prometemos un servicio excepcional!</p>
+    </section>
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p><strong>Dirección:</strong> Carrera 10 # 20-30, Bogotá, Colombia</p>
+        <p><strong>Teléfono:</strong> +57 323 456 189</p>
+        <p><strong>Horario de Atención:</strong> Lunes a Viernes, 9:00 am - 6:00 pm</p>
+    </section>
+    <section id="rastreo">
+        <h2>Rastreo-Guía</h2>
+        <form>
+            <label for="guia">Ingresa tu número de guía:</label>
+            <input type="text" id="guia" name="guia">
+            <button type="button" onclick="validarGuia()">Rastrear</button>
+            <p id="error-msg" class="error"></p>
+        </form>
+    </section>
+    <section id="paqueteria">
+        <h2>Paquetería</h2>
+        <p>En ANDP ENvs, entendemos lo importante que es para ti mantener tus paquetes seguros y protegidos durante su transporte.</p>
+        <p>Es por eso que todos nuestros envíos están cuidadosamente embalados y equipados con la última tecnología de rastreo.</p>
+        <p>Puedes confiar en nosotros para entregar tus paquetes de manera segura y puntual.</p>
+        <p>¡Tu satisfacción es nuestra prioridad número uno!</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 ANDP ENvs - Mensajería Colombiana</p>
+    </footer>
+    <script>
+        function validarGuia() {
+            var guia = document.getElementById("guia").value;
+            var errorMensaje = document.getElementById("error-msg");
+            
+            if (guia.length === 0) {
+                errorMensaje.textContent = "Por favor ingresa un número de guía.";
+                return;
+            }
+            
+            errorMensaje.textContent = "El número de guía ingresado es incorrecto.";
+        }
+    </script>
+</body>
+</html>
